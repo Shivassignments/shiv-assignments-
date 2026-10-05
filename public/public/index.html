@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shiv Assignments — Assignment Solutions</title><meta name="description" content="Original assignment solutions and study resources."><link rel="stylesheet" href="styles.css">
+<style id="shiv-assignments-brand">
+:root{
+  --brand:#166534;
+  --brand-dark:#0f3d24;
+  --brand-light:#ecfdf3;
+  --ink:#17231b;
+}
+.brand-logo{font-weight:800;letter-spacing:-.03em;color:var(--brand-dark)}
+.brand-logo .mark{display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:10px;background:var(--brand);
+  color:#fff;margin-right:8px;font-weight:900}
+.brand-tagline{font-size:.9rem;color:#64748b}
+.hero-brand{font-weight:900;letter-spacing:-.045em}
+</style>
+
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="#"><span class="logo">S</span><span>Shiv Assignments<span class="dot">.</span></span></a><nav><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#about">About</a></nav><button class="adminBtn" onclick="showAdmin()">Admin</button></div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">ORIGINAL • DIGITAL • INSTANT</div><h1>Find your course.<br><em>Get your solution.</em></h1><p>Original assignment solutions prepared for students. Search by programme or course code and get your PDF after payment.</p><div class="search"><span>⌕</span><input id="search" placeholder="Search course code, title or programme…" oninput="renderProducts()"></div></div><div class="heroCard"><div class="seal">S</div><b>Shiv Assignments</b><small>Study smarter. Submit better.</small><div class="mini">Secure checkout · Instant delivery</div></div></section>
+<section id="courses" class="section"><div class="sectionHead"><div><div class="eyebrow">LIBRARY</div><h2>Assignment solutions</h2></div><select id="programme" onchange="renderProducts()"><option value="all">All programmes</option></select></div><div id="products" class="grid"></div></section>
+<section id="how" class="steps"><div><span>01</span><h3>Choose</h3><p>Find your programme and course code.</p></div><div><span>02</span><h3>Pay</h3><p>Complete a secure UPI/card checkout.</p></div><div><span>03</span><h3>Download</h3><p>Receive your purchased PDF securely.</p></div></section>
+<section id="about" class="about"><div><div class="eyebrow">OUR PROMISE</div><h2>Simple for students.<br>Easy for you.</h2></div><p>Shiv Assignments is designed for original study material and assignment solutions. The admin dashboard is intended to make adding courses, changing prices and replacing PDFs simple—without editing the website code.</p></section>
+</main>
+<footer><span>© 2026 Shiv Assignments</span><span>Independent study-resource platform · Not affiliated with IGNOU</span></footer>
+<div id="modal" class="modal hidden"><div class="panel"><button class="close" onclick="hideAdmin()">×</button><h2>Admin dashboard</h2><p class="muted">Admin area. Authenticate with your deployment admin secret before making catalogue changes.</p><div class="adminGrid"><label>Programme<input id="aProg" placeholder="MA History"></label><label>Course code<input id="aCode" placeholder="MHI-001"></label><label>Course title<input id="aTitle" placeholder="Ancient Indian History"></label><label>Price (₹)<input id="aPrice" type="number" placeholder="99"></label><label class="wide">PDF file<input id="aPdf" type="file" accept="application/pdf"></label></div><button class="primary" onclick="addProduct()">Add to catalogue</button><div id="adminList"></div></div></div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script><script src="app.js"></script></body></html>
